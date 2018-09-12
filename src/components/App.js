@@ -8,7 +8,6 @@ class App extends React.Component {
 		return (
 			<div>
 				<h1>React App</h1>
-				<Menu />
 			</div>
 		)
 	}
