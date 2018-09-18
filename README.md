@@ -8,12 +8,19 @@ This repository contains the code for a weather application.
 
 -   Ability to access current weather data for any location including over 200,000 cities
 -   5 day forecast is available at any location or city
--   Gets weather data from [openweather API](https://openweathermap.org/api)
--   Uses React/Redux, NodeJs on backend, MongoDb as database
--   Uses localStorage for keeping list of requested cities
--   Implements authorization via JSON web token (JWT)
 
-## Installing
+## Technologies and libraries
+
+-   React/Redux
+-   NodeJS
+-   MongoDb
+-   Semantic UI, Semantic UI React
+-   Webpack
+-   localStorage for keeping list of requested cities
+-   JSON web token (JWT) for authorization
+-   Gets weather data from [openweathermap API](https://openweathermap.org/api)
+
+## Getting Started
 
 1. Clone this repository. To install dependencies:
 

@@ -49,7 +49,6 @@
     "semantic-ui-css": "^2.3.3",
     "semantic-ui-react": "^0.82.4",
     "validator": "^10.7.1",
-    "victory": "^30.3.1",
     "webpack-merge": "^4.1.4"
   }
 }
