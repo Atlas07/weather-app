@@ -35,9 +35,9 @@ class LoginPage extends React.Component {
 						{state && (
 							<Message>
 								<Message.Header>
-									Unable to do get that page
+									Unable to do get this page
 								</Message.Header>
-								<p>Log in before accessing it</p>
+								<p>Log in to access it</p>
 							</Message>
 						)}
 						<LoginForm submit={this.submit} />

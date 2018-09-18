@@ -12,6 +12,7 @@ import HomePage from "./pages/HomePage"
 import AboutUsPage from "./pages/AboutUsPage"
 import ForecastPage from "./pages/ForecastPage"
 import LoginPage from "./pages/LoginPage"
+import SignupPage from "./pages/SignupPage"
 import ContactPage from "./pages/ContactPage"
 
 const App = ({ location }) => (
@@ -31,6 +32,12 @@ const App = ({ location }) => (
 			component={ForecastPage}
 		/>
 		<Route location={location} path="/login" exact component={LoginPage} />
+		<Route
+			location={location}
+			path="/signup"
+			exact
+			component={SignupPage}
+		/>
 		<Route
 			location={location}
 			path="/contact-us"

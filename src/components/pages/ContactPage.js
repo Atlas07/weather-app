@@ -25,7 +25,7 @@ const ContactPage = () => (
 
 					<a
 						className="contact-link"
-						href="https://github.com/Atlas07"
+						href="https://github.com/Atlas07/weather-app"
 						target="_blank"
 						rel="noopener noreferrer"
 					>

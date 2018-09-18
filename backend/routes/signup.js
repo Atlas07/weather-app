@@ -6,8 +6,8 @@ import User from "../models/User"
 const router = express.Router()
 
 router.post("/", (req, res) => {
-	const { email, password } = req.body.credentials
-	const user = new User({ email })
+	const { email, password, name } = req.body.credentials
+	const user = new User({ email, name })
 
 	user.setPassword(password)
 	user.setConfirmationToken()

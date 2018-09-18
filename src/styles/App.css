@@ -77,3 +77,8 @@ p.date {
 	justify-content: center;
 	margin-top: 30px;
 }
+
+.menu-top-name {
+	margin: 0 15px 0;
+	align-self: center;
+}

@@ -15,6 +15,7 @@ const schema = new mongoose.Schema({
 		type: String,
 		required: true
 	},
+	name: { type: String },
 	confirmationToken: { type: String, default: "" }
 })
 
@@ -41,6 +42,7 @@ schema.methods.generateJWT = function generateJWT() {
 
 schema.methods.toAuthJSON = function toAuthJSON() {
 	return {
+		name: this.name,
 		email: this.email,
 		token: this.generateJWT()
 	}

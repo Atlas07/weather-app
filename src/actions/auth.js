@@ -15,8 +15,11 @@ export const userLoggedOut = () => ({
 export const signup = credentials => dispatch =>
 	axios
 		.post("http://localhost:9000/api/signup", { credentials })
-		.then(res => res.json())
-		.then(user => console.log(user))
+		.then(handleResponse)
+		.then(res => {
+			saveToLC(res.user.token, "weatherJWT")
+			dispatch(userLoggedIn(res.user))
+		})
 
 export const login = credentials => dispatch =>
 	axios

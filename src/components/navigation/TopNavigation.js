@@ -21,6 +21,7 @@ const TopNavigation = ({ auth, logout }) => (
 
 		{auth.email ? (
 			<Menu.Menu position="right">
+				<p className="menu-top-name">{auth.name}</p>
 				<Menu.Item onClick={() => logout()}>Logout</Menu.Item>
 			</Menu.Menu>
 		) : (
@@ -45,7 +46,8 @@ function mapStateToProps(state) {
 TopNavigation.propTypes = {
 	logout: PropTypes.func.isRequired,
 	auth: PropTypes.shape({
-		email: PropTypes.string
+		email: PropTypes.string,
+		name: PropTypes.string
 	})
 }
 
