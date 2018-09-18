@@ -1,16 +1,42 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { hot } from "react-hot-loader"
+import { Route } from "react-router-dom"
 
 import "../styles/App.css"
 
-class App extends React.Component {
-	render() {
-		return (
-			<div>
-				<h1>React App</h1>
-			</div>
-		)
-	}
+import UserRoute from "./routes/UserRoute"
+
+import TopNavigation from "./navigation/TopNavigation"
+import HomePage from "./pages/HomePage"
+import AboutUsPage from "./pages/AboutUsPage"
+import ForecastPage from "./pages/ForecastPage"
+import LoginPage from "./pages/LoginPage"
+
+const App = ({ location }) => (
+	<div className="ui-container">
+		<TopNavigation />
+		<Route location={location} path="/" exact component={HomePage} />
+		<Route
+			location={location}
+			path="/about-us"
+			exact
+			component={AboutUsPage}
+		/>
+		<UserRoute
+			location={location}
+			path="/forecast/id:cityId"
+			exact
+			component={ForecastPage}
+		/>
+		<Route location={location} path="/login" exact component={LoginPage} />
+	</div>
+)
+
+App.propTypes = {
+	location: PropTypes.shape({
+		href: PropTypes.string
+	}).isRequired
 }
 
 export default hot(module)(App)

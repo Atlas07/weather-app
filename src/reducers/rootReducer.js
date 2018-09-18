@@ -1,3 +1,11 @@
 import { combineReducers } from "redux"
 
-export default combineReducers({})
+import weather from "./weather"
+import forecast from "./forecast"
+import auth from "./auth"
+
+export default combineReducers({
+	weather,
+	forecast,
+	auth
+})

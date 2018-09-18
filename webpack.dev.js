@@ -7,8 +7,8 @@ module.exports = merge(common, {
 	mode: "development",
 	devtool: "inline-source-map",
 	devServer: {
-		contentBase: "./dist",
-		hot: true
+		hot: true,
+		historyApiFallback: true
 	},
 	module: {
 		rules: [

@@ -1,1 +1,67 @@
+.weather-h1 {
+	margin-top: 25px !important;
+}
 
+p.date {
+	margin: 0 !important;
+}
+
+.card-header {
+	margin-bottom: 15px !important;
+}
+
+.card-meta {
+	margin-bottom: 15px !important;
+}
+
+.custom-cards {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+.icon-plus {
+	text-align: center !important;
+	margin: 5px auto !important;
+}
+
+.first-container {
+	margin-top: 90px !important;
+}
+
+.about-us-container {
+	margin-top: 40px !important;
+}
+
+.weather-form {
+	margin: 30px 0 !important;
+}
+
+.city-btn {
+	margin-bottom: 10px !important;
+}
+
+.forecast-h2 {
+	text-transform: uppercase !important;
+}
+
+.temp-forecast-description {
+	padding-bottom: 14px !important;
+}
+
+.forecast-menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid rgba(34, 36, 38, 0.15);
+	box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
+	border-radius: 0.28571429rem;
+}
+
+.forecast-menu-item {
+	padding: 10px;
+}
+
+.p-container {
+	display: flex;
+	justify-content: space-between;
+}

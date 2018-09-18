@@ -1,0 +1,7 @@
+export const ADD_CITY = "ADD_CITY"
+export const DELETE_CITY = "DELETE_CITY"
+
+export const FORECAST_FETCHED = "FORECAST_FETCHED"
+
+export const USER_LOGGED_IN = "USER_LOGGED_IN"
+export const USER_LOGGED_OUT = "USER_LOGGED_OUT"
