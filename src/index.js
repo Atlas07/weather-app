@@ -12,26 +12,32 @@ import { composeWithDevTools } from "redux-devtools-extension"
 import rootReducer from "./reducers/rootReducer"
 
 import setAuthorizationHeader from "./utils/setAuthorizationHeader"
+import { loadState, saveState } from "./localStorage"
 import { userLoggedIn } from "./actions/auth"
 
 import App from "./components/App"
 
+const persistedState = loadState("weather")
 const store = createStore(
 	rootReducer,
+	persistedState,
 	composeWithDevTools(applyMiddleware(thunk))
 )
 
-const jwtWeather = localStorage.getItem("weatherJWT")
+store.subscribe(() => {
+	saveState({ weather: store.getState().weather }, "weather")
+})
+
+const jwtWeather = loadState("weatherJWT")
 
 if (jwtWeather) {
 	const payload = decode(jwtWeather)
-
 	const user = {
 		token: jwtWeather,
 		email: payload.email
 	}
 
-	setAuthorizationHeader(localStorage.bookwormJWT)
+	// setAuthorizationHeader(localStorage.bookwormJWT)
 	store.dispatch(userLoggedIn(user))
 }
 
