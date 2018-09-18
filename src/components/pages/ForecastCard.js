@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import { Card, Image } from "semantic-ui-react"
+import { roundNumber } from "../../commonFunctions"
 
 class ForecastCard extends React.Component {
 	state = {}
@@ -21,16 +22,6 @@ class ForecastCard extends React.Component {
 		const components = date.split("-").reverse()
 
 		return `${components[0]}/${components[1]}/${components[2]}`
-	}
-
-	roundNumber = (num, precision, system) => {
-		if (system === 0) {
-			num -= 273
-		} else {
-			num = 1.8 * (num - 273) + 32
-		}
-
-		return num.toFixed(precision)
 	}
 
 	render() {
@@ -54,7 +45,7 @@ class ForecastCard extends React.Component {
 					textAlign="center"
 					className="temp-forecast-description"
 				>
-					{this.roundNumber(data[0].main.temp, 1, 0)}C
+					{roundNumber(data[0].main.temp, 1, 0)}C
 				</Card.Description>
 				<Card.Content extra textAlign="center">
 					{data[0].weather[0].description}

@@ -6,7 +6,7 @@ import { Header, Grid, Transition } from "semantic-ui-react"
 import { getCity } from "../../actions/weather"
 
 import WeatherForm from "../forms/WeatherForm"
-import CitiesContainer from "./CitiesContainer"
+import CityContainer from "./CityContainer"
 import EmptyListCard from "../messages/EmptyListCard"
 
 class WeatherContainer extends Component {
@@ -52,6 +52,14 @@ class WeatherContainer extends Component {
 	render() {
 		const { weatherList } = this.props
 
+		const citiesList = (
+			<div className="ui three cards custom-cards">
+				{weatherList.map(city => (
+					<CityContainer city={city} key={JSON.stringify(city)} />
+				))}
+			</div>
+		)
+
 		return (
 			<Grid centered>
 				<Grid.Row>
@@ -77,7 +85,7 @@ class WeatherContainer extends Component {
 						/>
 
 						{weatherList.length !== 0 ? (
-							<CitiesContainer data={weatherList} />
+							citiesList
 						) : (
 							<EmptyListCard />
 						)}

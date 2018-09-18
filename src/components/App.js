@@ -12,6 +12,7 @@ import HomePage from "./pages/HomePage"
 import AboutUsPage from "./pages/AboutUsPage"
 import ForecastPage from "./pages/ForecastPage"
 import LoginPage from "./pages/LoginPage"
+import ContactPage from "./pages/ContactPage"
 
 const App = ({ location }) => (
 	<div className="ui-container">
@@ -30,6 +31,12 @@ const App = ({ location }) => (
 			component={ForecastPage}
 		/>
 		<Route location={location} path="/login" exact component={LoginPage} />
+		<Route
+			location={location}
+			path="/contact-us"
+			exact
+			component={ContactPage}
+		/>
 	</div>
 )
 

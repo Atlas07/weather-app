@@ -73,7 +73,7 @@ class ForecastPage extends React.Component {
 							{forecast.list.map((day, i) => (
 								<ForecastCard
 									index={i}
-									key={i}
+									key={JSON.stringify(day)}
 									data={day}
 									click={this.cardClick}
 								/>
