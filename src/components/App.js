@@ -18,6 +18,8 @@ import ContactPage from "./pages/ContactPage"
 const App = ({ location }) => (
 	<div className="ui-container">
 		<TopNavigation />
+
+		
 		<Route location={location} path="/" exact component={HomePage} />
 		<Route
 			location={location}

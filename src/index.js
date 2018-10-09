@@ -11,7 +11,6 @@ import thunk from "redux-thunk"
 import { composeWithDevTools } from "redux-devtools-extension"
 import rootReducer from "./reducers/rootReducer"
 
-import setAuthorizationHeader from "./utils/setAuthorizationHeader"
 import { loadState, saveState } from "./localStorage"
 import { userLoggedIn } from "./actions/auth"
 
